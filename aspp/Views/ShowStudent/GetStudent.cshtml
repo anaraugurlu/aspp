@@ -1,0 +1,35 @@
+﻿@model aspp.Entities.Student
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetStudent</title>
+    <style>
+        ul {
+            text-align: center;
+            margin-top: 2em;
+        }
+
+            ul > li {
+                margin-top: 1em;
+            }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li>Id : @Model.Id</li>
+        <li>Name : @Model.Name</li>
+        <li>Surname : @Model.Surname</li>
+        <li>Age : @Model.Age</li>
+        <li>Salary : @Model.Salary</li>
+    </ul>
+  
+</body>
+</html>

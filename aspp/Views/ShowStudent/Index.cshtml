@@ -1,0 +1,31 @@
+﻿@model IEnumerable<aspp.Entities.Student>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+ 
+</head>
+<body>
+    @foreach (var item in Model)
+    {
+        <ul>
+            <li>Id : @item.Id</li>
+        </ul>
+    }
+    <form asp-controller="GetStudent">
+        @Html.Label("Id ");
+        @Html.TextBox("Id", ViewData["Id"]);
+            
+        <button  style=" background-color:bisque;" asp-action="GetStudent" type="submit">Get Student</button>
+    </form>
+
+   
+</body>
+</html>

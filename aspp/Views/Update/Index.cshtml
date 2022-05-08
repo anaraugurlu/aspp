@@ -1,0 +1,49 @@
+﻿@model IEnumerable<aspp.Entities.Student>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style>
+        ul {
+            text-align: center;
+            margin-top: 2em;
+        }
+
+            ul > li {
+                margin-top: 1em;
+            }
+    </style>
+</head>
+<body>
+    @foreach (var item in Model)
+    {
+        <ul>
+            <li>Id : @item.Id</li>
+            <li>Name : @item.Name</li>
+            <li>Surname : @item.Surname</li>
+            <li>Age : @item.Age</li>
+            <li>Address : @item.Address</li>
+            <li>Salary : @item.Salary</li>
+        </ul>
+    }
+
+    <form asp-controller="UpdateStudent">
+        @Html.Label(" Id ");
+        @Html.TextBox("Id", ViewData["Id"]);
+        <button style=" background-color:bisque;" asp-action="UserFind1" type="submit">Update</button>
+    </form>
+
+
+
+    <form asp-controller="ShowAllStudent">
+
+    </form>
+</body>
+</html>

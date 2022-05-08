@@ -1,0 +1,58 @@
+﻿@model aspp.Entities.Student
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UserFind1</title>
+    <style>
+        div {
+            text-align: center;
+            margin-top: 2em;
+        }
+
+            div>  {
+                margin-top: 1em;
+            }
+    </style>
+</head>
+<body>
+    <form asp-controller="Update" asp asp-action="UserFind" enctype="multipart/form-data" class="requires-validation" novalidate>
+
+
+        <div class="form-floating mb-3">
+            <input asp-for="@Model.Id" type="number" class="form-control" id="floatingInput">
+            <label for="floatingInput">Id</label>
+        </div>
+        <div class="form-floating">
+            <input asp-for="@Model.Name" type="text" class="form-control" id="floatingName">
+            <label for="floatingName">Name</label>
+        </div>
+        <div class="form-floating">
+            <input asp-for="@Model.Surname" type="text" class="form-control" id="floatingSurname">
+            <label for="floatingSurname">Surname</label>
+        </div>
+        <div class="form-floating">
+            <input asp-for="@Model.Age" type="number" class="form-control" id="floatingAge">
+            <label for="floatingAge">Age</label>
+        </div>
+        <div class="form-floating">
+            <input asp-for="@Model.Address" type="text" class="form-control" id="floatingAddress">
+            <label for="floatingAddress">Address</label>
+        </div>
+        <div class="form-floating">
+            <input asp-for="@Model.Salary" type="number" class="form-control" id="floatingSalary">
+            <label for="floatingSalary">Salary</label>
+        </div>
+
+        <div class="form-button mt-3">
+            <button style=" background-color:bisque;" id="submit" type="submit" class="btn btn-primary">Update</button>
+        </div>
+    </form>
+</body>
+</html>

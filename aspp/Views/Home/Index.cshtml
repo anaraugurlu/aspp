@@ -1,0 +1,54 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+    <style>
+     
+
+        div {
+            text-align: left;
+            display:flex;
+            flex-flow:column;
+        }
+            div > form {
+                display: flex;
+                flex-flow: column;
+                margin-top:2em;
+            }
+            div > form>button{
+             background-color:bisque;
+                margin-top: 2em;
+            }
+        button {
+            width: 200px;
+            font-size: 2em;
+            text-align: center;
+            background-color: bisque;
+        }
+    </style>
+
+</head>
+<body>
+
+
+    <div>
+        <form asp-controller="Home">
+
+            <button asp-controller="Home" asp-action="AddStudent">Register</button>
+            <button asp-controller="Home" asp-action="DeleteStudent">Remove</button>
+            <button asp-controller="Home" asp-action="UpdateStudent">Update</button>
+            <button asp-controller="Home" asp-action="ShowStudent">Show </button>
+            <button asp-controller="Home" asp-action="ShowStudents">Show All </button>
+        </form>
+    </div>
+
+</body>
+</html>
